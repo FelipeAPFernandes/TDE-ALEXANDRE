@@ -57,6 +57,10 @@
             this.lblSEXO = new System.Windows.Forms.Label();
             this.lblTELEFONE = new System.Windows.Forms.Label();
             this.mtbTELEFONE = new System.Windows.Forms.MaskedTextBox();
+            this.lblRG = new System.Windows.Forms.Label();
+            this.mtbRG = new System.Windows.Forms.MaskedTextBox();
+            this.mtbDATA = new System.Windows.Forms.MaskedTextBox();
+            this.lblDATA = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblNOME
@@ -107,7 +111,7 @@
             "São Paulo (SP)",
             "Sergipe (SE)",
             "Tocantins (TO)"});
-            this.cmbESTADO.Location = new System.Drawing.Point(12, 218);
+            this.cmbESTADO.Location = new System.Drawing.Point(12, 217);
             this.cmbESTADO.Name = "cmbESTADO";
             this.cmbESTADO.Size = new System.Drawing.Size(148, 21);
             this.cmbESTADO.TabIndex = 2;
@@ -351,12 +355,53 @@
             this.mtbTELEFONE.TabIndex = 34;
             this.mtbTELEFONE.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbTELEFONE_MaskInputRejected);
             // 
+            // lblRG
+            // 
+            this.lblRG.AutoSize = true;
+            this.lblRG.Location = new System.Drawing.Point(12, 138);
+            this.lblRG.Name = "lblRG";
+            this.lblRG.Size = new System.Drawing.Size(26, 13);
+            this.lblRG.TabIndex = 35;
+            this.lblRG.Text = "R.G";
+            // 
+            // mtbRG
+            // 
+            this.mtbRG.Location = new System.Drawing.Point(12, 154);
+            this.mtbRG.Mask = "00-000-000-0";
+            this.mtbRG.Name = "mtbRG";
+            this.mtbRG.Size = new System.Drawing.Size(70, 20);
+            this.mtbRG.TabIndex = 36;
+            this.mtbRG.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbRG_MaskInputRejected);
+            // 
+            // mtbDATA
+            // 
+            this.mtbDATA.Location = new System.Drawing.Point(93, 154);
+            this.mtbDATA.Mask = "00/00/0000";
+            this.mtbDATA.Name = "mtbDATA";
+            this.mtbDATA.Size = new System.Drawing.Size(67, 20);
+            this.mtbDATA.TabIndex = 37;
+            this.mtbDATA.ValidatingType = typeof(System.DateTime);
+            this.mtbDATA.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbDATA_MaskInputRejected);
+            // 
+            // lblDATA
+            // 
+            this.lblDATA.AutoSize = true;
+            this.lblDATA.Location = new System.Drawing.Point(90, 138);
+            this.lblDATA.Name = "lblDATA";
+            this.lblDATA.Size = new System.Drawing.Size(78, 13);
+            this.lblDATA.TabIndex = 38;
+            this.lblDATA.Text = "NASCIMENTO";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(331, 428);
+            this.Controls.Add(this.lblDATA);
+            this.Controls.Add(this.mtbDATA);
+            this.Controls.Add(this.mtbRG);
+            this.Controls.Add(this.lblRG);
             this.Controls.Add(this.mtbTELEFONE);
             this.Controls.Add(this.lblTELEFONE);
             this.Controls.Add(this.lblSEXO);
@@ -424,6 +469,10 @@
         private System.Windows.Forms.Label lblSEXO;
         private System.Windows.Forms.Label lblTELEFONE;
         private System.Windows.Forms.MaskedTextBox mtbTELEFONE;
+        private System.Windows.Forms.Label lblRG;
+        private System.Windows.Forms.MaskedTextBox mtbRG;
+        private System.Windows.Forms.MaskedTextBox mtbDATA;
+        private System.Windows.Forms.Label lblDATA;
     }
 }
 

@@ -130,12 +130,15 @@ namespace TDE_ALEXANDRE
             mensagem += "CPF:  " + mtbCPF.Text + "\n";
             mensagem += "Sexo: " + genero + "\n";
             mensagem += "Telefone: " + mtbTELEFONE.Text + "\n";
+            mensagem += "RG: " + mtbRG.Text + "\n";
+            mensagem += "Data de Nascimento: " + mtbDATA.Text + "\n";
             mensagem += "Cidade:  " + txtCIDADE.Text + "\n";
             mensagem += "Bairro:  " +txtBAIRRO.Text + "\n";
             mensagem += "Estado:  " + cmbESTADO.Text + "\n";
             mensagem += "Rua:  " + txtRUA.Text + "\n";
             mensagem += "Número:  " + mtbNUMERO.Text + "\n";
             mensagem += "Senha:  " + txtSENHA.Text + "\n";
+            
             
             MessageBox.Show(mensagem);
             
@@ -153,6 +156,16 @@ namespace TDE_ALEXANDRE
         }
 
         private void mtbTELEFONE_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void mtbRG_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void mtbDATA_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
         }
