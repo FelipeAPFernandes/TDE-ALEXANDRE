@@ -31,7 +31,6 @@
             this.lblNOME = new System.Windows.Forms.Label();
             this.txtNOME = new System.Windows.Forms.TextBox();
             this.cmbESTADO = new System.Windows.Forms.ComboBox();
-            this.btnSALVAR = new System.Windows.Forms.Button();
             this.lblSOBRENOME = new System.Windows.Forms.Label();
             this.lblEMAIL = new System.Windows.Forms.Label();
             this.lblCPF = new System.Windows.Forms.Label();
@@ -48,10 +47,11 @@
             this.txtRUA = new System.Windows.Forms.TextBox();
             this.txtSENHA = new System.Windows.Forms.TextBox();
             this.btnCANCELAR = new System.Windows.Forms.Button();
-            this.txtNUMERO = new System.Windows.Forms.MaskedTextBox();
             this.lblCONFIRMAR = new System.Windows.Forms.Label();
             this.txtCONFIRMAR = new System.Windows.Forms.TextBox();
-            this.txtCPF = new System.Windows.Forms.MaskedTextBox();
+            this.mtbNUMERO = new System.Windows.Forms.MaskedTextBox();
+            this.mtbCPF = new System.Windows.Forms.MaskedTextBox();
+            this.btnSALVAR = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblNOME
@@ -79,16 +79,6 @@
             this.cmbESTADO.Size = new System.Drawing.Size(148, 21);
             this.cmbESTADO.TabIndex = 2;
             this.cmbESTADO.SelectedIndexChanged += new System.EventHandler(this.cmbESTADO_SelectedIndexChanged);
-            // 
-            // btnSALVAR
-            // 
-            this.btnSALVAR.Location = new System.Drawing.Point(12, 362);
-            this.btnSALVAR.Name = "btnSALVAR";
-            this.btnSALVAR.Size = new System.Drawing.Size(148, 54);
-            this.btnSALVAR.TabIndex = 3;
-            this.btnSALVAR.Text = "SALVAR";
-            this.btnSALVAR.UseVisualStyleBackColor = true;
-            this.btnSALVAR.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblSOBRENOME
             // 
@@ -229,16 +219,6 @@
             this.btnCANCELAR.UseVisualStyleBackColor = true;
             this.btnCANCELAR.Click += new System.EventHandler(this.btnCANCELAR_Click);
             // 
-            // txtNUMERO
-            // 
-            this.txtNUMERO.Location = new System.Drawing.Point(276, 297);
-            this.txtNUMERO.Mask = "(         )";
-            this.txtNUMERO.Name = "txtNUMERO";
-            this.txtNUMERO.Size = new System.Drawing.Size(41, 20);
-            this.txtNUMERO.TabIndex = 23;
-            this.txtNUMERO.ValidatingType = typeof(int);
-            this.txtNUMERO.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
-            // 
             // lblCONFIRMAR
             // 
             this.lblCONFIRMAR.AutoSize = true;
@@ -256,14 +236,34 @@
             this.txtCONFIRMAR.TabIndex = 25;
             this.txtCONFIRMAR.TextChanged += new System.EventHandler(this.txtCONFIRMAR_TextChanged);
             // 
-            // txtCPF
+            // mtbNUMERO
             // 
-            this.txtCPF.Location = new System.Drawing.Point(236, 90);
-            this.txtCPF.Mask = "000-000-000-00";
-            this.txtCPF.Name = "txtCPF";
-            this.txtCPF.Size = new System.Drawing.Size(81, 20);
-            this.txtCPF.TabIndex = 26;
-            this.txtCPF.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtCPF_MaskInputRejected);
+            this.mtbNUMERO.Location = new System.Drawing.Point(276, 297);
+            this.mtbNUMERO.Mask = "(00000)";
+            this.mtbNUMERO.Name = "mtbNUMERO";
+            this.mtbNUMERO.Size = new System.Drawing.Size(43, 20);
+            this.mtbNUMERO.TabIndex = 27;
+            this.mtbNUMERO.ValidatingType = typeof(int);
+            this.mtbNUMERO.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbNUMERO_MaskInputRejected);
+            // 
+            // mtbCPF
+            // 
+            this.mtbCPF.Location = new System.Drawing.Point(236, 90);
+            this.mtbCPF.Mask = "000-000-000-00";
+            this.mtbCPF.Name = "mtbCPF";
+            this.mtbCPF.Size = new System.Drawing.Size(81, 20);
+            this.mtbCPF.TabIndex = 28;
+            this.mtbCPF.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbCPF_MaskInputRejected);
+            // 
+            // btnSALVAR
+            // 
+            this.btnSALVAR.Location = new System.Drawing.Point(12, 362);
+            this.btnSALVAR.Name = "btnSALVAR";
+            this.btnSALVAR.Size = new System.Drawing.Size(148, 54);
+            this.btnSALVAR.TabIndex = 29;
+            this.btnSALVAR.Text = "SALVAR";
+            this.btnSALVAR.UseVisualStyleBackColor = true;
+            this.btnSALVAR.Click += new System.EventHandler(this.btnSALVAR_Click);
             // 
             // Form1
             // 
@@ -271,10 +271,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(331, 428);
-            this.Controls.Add(this.txtCPF);
+            this.Controls.Add(this.btnSALVAR);
+            this.Controls.Add(this.mtbCPF);
+            this.Controls.Add(this.mtbNUMERO);
             this.Controls.Add(this.txtCONFIRMAR);
             this.Controls.Add(this.lblCONFIRMAR);
-            this.Controls.Add(this.txtNUMERO);
             this.Controls.Add(this.btnCANCELAR);
             this.Controls.Add(this.txtSENHA);
             this.Controls.Add(this.txtRUA);
@@ -291,7 +292,6 @@
             this.Controls.Add(this.lblCPF);
             this.Controls.Add(this.lblEMAIL);
             this.Controls.Add(this.lblSOBRENOME);
-            this.Controls.Add(this.btnSALVAR);
             this.Controls.Add(this.cmbESTADO);
             this.Controls.Add(this.txtNOME);
             this.Controls.Add(this.lblNOME);
@@ -307,7 +307,6 @@
         private System.Windows.Forms.Label lblNOME;
         private System.Windows.Forms.TextBox txtNOME;
         private System.Windows.Forms.ComboBox cmbESTADO;
-        private System.Windows.Forms.Button btnSALVAR;
         private System.Windows.Forms.Label lblSOBRENOME;
         private System.Windows.Forms.Label lblEMAIL;
         private System.Windows.Forms.Label lblCPF;
@@ -324,10 +323,11 @@
         private System.Windows.Forms.TextBox txtRUA;
         private System.Windows.Forms.TextBox txtSENHA;
         private System.Windows.Forms.Button btnCANCELAR;
-        private System.Windows.Forms.MaskedTextBox txtNUMERO;
         private System.Windows.Forms.Label lblCONFIRMAR;
         private System.Windows.Forms.TextBox txtCONFIRMAR;
-        private System.Windows.Forms.MaskedTextBox txtCPF;
+        private System.Windows.Forms.MaskedTextBox mtbNUMERO;
+        private System.Windows.Forms.MaskedTextBox mtbCPF;
+        private System.Windows.Forms.Button btnSALVAR;
     }
 }
 

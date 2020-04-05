@@ -101,5 +101,32 @@ namespace TDE_ALEXANDRE
         {
 
         }
+
+        private void mtbNUMERO_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void mtbCPF_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void btnSALVAR_Click(object sender, EventArgs e)
+        {
+            String mensagem = "";
+            mensagem += "Nome: " + txtNOME.Text + " " + txtSOBRENOME.Text + "\n";
+            mensagem += "E-mail:  " + txtEMAIL.Text + "\n";
+            mensagem += "CPF:  " + mtbCPF.Text + "\n";
+            mensagem += "Cidade:  " + txtCIDADE.Text + "\n";
+            mensagem += "Bairro:  " +txtBAIRRO.Text + "\n";
+            mensagem += "Estado:  " + cmbESTADO.Text + "\n";
+            mensagem += "Rua:  " + txtRUA.Text + "\n";
+            mensagem += "Número:  " + mtbNUMERO.Text + "\n";
+            mensagem += "Senha:  " + txtSENHA.Text + "\n";
+            MessageBox.Show(mensagem);
+            
+
+        }
     }
 }
