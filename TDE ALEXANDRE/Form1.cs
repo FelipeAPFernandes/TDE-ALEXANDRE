@@ -15,7 +15,9 @@ namespace TDE_ALEXANDRE
         public Form1()
         {
             InitializeComponent();
+
         }
+        string genero;
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
@@ -79,7 +81,7 @@ namespace TDE_ALEXANDRE
 
         private void cmbESTADO_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void txtCPF_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
@@ -114,18 +116,44 @@ namespace TDE_ALEXANDRE
 
         private void btnSALVAR_Click(object sender, EventArgs e)
         {
+            if (rdbMASCULINO.Checked)
+            {
+                genero = "MASCULINO";
+            }
+            else
+            { 
+                genero = "FEMININO";
+            }
             String mensagem = "";
             mensagem += "Nome: " + txtNOME.Text + " " + txtSOBRENOME.Text + "\n";
             mensagem += "E-mail:  " + txtEMAIL.Text + "\n";
             mensagem += "CPF:  " + mtbCPF.Text + "\n";
+            mensagem += "Sexo: " + genero + "\n";
+            mensagem += "Telefone: " + mtbTELEFONE.Text + "\n";
             mensagem += "Cidade:  " + txtCIDADE.Text + "\n";
             mensagem += "Bairro:  " +txtBAIRRO.Text + "\n";
             mensagem += "Estado:  " + cmbESTADO.Text + "\n";
             mensagem += "Rua:  " + txtRUA.Text + "\n";
             mensagem += "Número:  " + mtbNUMERO.Text + "\n";
             mensagem += "Senha:  " + txtSENHA.Text + "\n";
+            
             MessageBox.Show(mensagem);
             
+
+        }
+
+        private void rdbMASCULINO_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbdFEMININO_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mtbTELEFONE_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
 
         }
     }

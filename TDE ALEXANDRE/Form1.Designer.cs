@@ -52,6 +52,11 @@
             this.mtbNUMERO = new System.Windows.Forms.MaskedTextBox();
             this.mtbCPF = new System.Windows.Forms.MaskedTextBox();
             this.btnSALVAR = new System.Windows.Forms.Button();
+            this.rdbMASCULINO = new System.Windows.Forms.RadioButton();
+            this.rbdFEMININO = new System.Windows.Forms.RadioButton();
+            this.lblSEXO = new System.Windows.Forms.Label();
+            this.lblTELEFONE = new System.Windows.Forms.Label();
+            this.mtbTELEFONE = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // lblNOME
@@ -74,6 +79,34 @@
             // cmbESTADO
             // 
             this.cmbESTADO.FormattingEnabled = true;
+            this.cmbESTADO.Items.AddRange(new object[] {
+            "Acre (AC)",
+            "Alagoas (AL)",
+            "Amapá (AP)",
+            "Amazonas (AM)",
+            "Bahia (BA)",
+            "Ceará (CE)",
+            "Distrito Federal (DF)",
+            "Espírito Santo (ES)",
+            "Goiás (GO)",
+            "Maranhão (MA)",
+            "Mato Grosso (MT)",
+            "Mato Grosso do Sul (MS)",
+            "Minas Gerais (MG)",
+            "Pará (PA)",
+            "Paraíba (PB)",
+            "Paraná (PR)",
+            "Pernambuco (PE)",
+            "Piauí (PI)",
+            "Rio de Janeiro (RJ)",
+            "Rio Grande do Norte (RN)",
+            "Rio Grande do Sul (RS)",
+            "Rondônia (RO)",
+            "Roraima (RR)",
+            "Santa Catarina (SC)",
+            "São Paulo (SP)",
+            "Sergipe (SE)",
+            "Tocantins (TO)"});
             this.cmbESTADO.Location = new System.Drawing.Point(12, 218);
             this.cmbESTADO.Name = "cmbESTADO";
             this.cmbESTADO.Size = new System.Drawing.Size(148, 21);
@@ -92,7 +125,7 @@
             // lblEMAIL
             // 
             this.lblEMAIL.AutoSize = true;
-            this.lblEMAIL.Location = new System.Drawing.Point(12, 74);
+            this.lblEMAIL.Location = new System.Drawing.Point(12, 63);
             this.lblEMAIL.Name = "lblEMAIL";
             this.lblEMAIL.Size = new System.Drawing.Size(42, 13);
             this.lblEMAIL.TabIndex = 6;
@@ -101,7 +134,7 @@
             // lblCPF
             // 
             this.lblCPF.AutoSize = true;
-            this.lblCPF.Location = new System.Drawing.Point(233, 74);
+            this.lblCPF.Location = new System.Drawing.Point(233, 63);
             this.lblCPF.Name = "lblCPF";
             this.lblCPF.Size = new System.Drawing.Size(27, 13);
             this.lblCPF.TabIndex = 7;
@@ -171,7 +204,7 @@
             // 
             // txtEMAIL
             // 
-            this.txtEMAIL.Location = new System.Drawing.Point(12, 90);
+            this.txtEMAIL.Location = new System.Drawing.Point(12, 79);
             this.txtEMAIL.Name = "txtEMAIL";
             this.txtEMAIL.Size = new System.Drawing.Size(218, 20);
             this.txtEMAIL.TabIndex = 15;
@@ -205,6 +238,7 @@
             // 
             this.txtSENHA.Location = new System.Drawing.Point(12, 336);
             this.txtSENHA.Name = "txtSENHA";
+            this.txtSENHA.PasswordChar = '*';
             this.txtSENHA.Size = new System.Drawing.Size(148, 20);
             this.txtSENHA.TabIndex = 20;
             this.txtSENHA.TextChanged += new System.EventHandler(this.txtSENHA_TextChanged);
@@ -232,6 +266,7 @@
             // 
             this.txtCONFIRMAR.Location = new System.Drawing.Point(169, 336);
             this.txtCONFIRMAR.Name = "txtCONFIRMAR";
+            this.txtCONFIRMAR.PasswordChar = '*';
             this.txtCONFIRMAR.Size = new System.Drawing.Size(148, 20);
             this.txtCONFIRMAR.TabIndex = 25;
             this.txtCONFIRMAR.TextChanged += new System.EventHandler(this.txtCONFIRMAR_TextChanged);
@@ -248,7 +283,7 @@
             // 
             // mtbCPF
             // 
-            this.mtbCPF.Location = new System.Drawing.Point(236, 90);
+            this.mtbCPF.Location = new System.Drawing.Point(236, 79);
             this.mtbCPF.Mask = "000-000-000-00";
             this.mtbCPF.Name = "mtbCPF";
             this.mtbCPF.Size = new System.Drawing.Size(81, 20);
@@ -265,12 +300,68 @@
             this.btnSALVAR.UseVisualStyleBackColor = true;
             this.btnSALVAR.Click += new System.EventHandler(this.btnSALVAR_Click);
             // 
+            // rdbMASCULINO
+            // 
+            this.rdbMASCULINO.AutoSize = true;
+            this.rdbMASCULINO.Location = new System.Drawing.Point(12, 118);
+            this.rdbMASCULINO.Name = "rdbMASCULINO";
+            this.rdbMASCULINO.Size = new System.Drawing.Size(88, 17);
+            this.rdbMASCULINO.TabIndex = 30;
+            this.rdbMASCULINO.TabStop = true;
+            this.rdbMASCULINO.Text = "MASCULINO";
+            this.rdbMASCULINO.UseVisualStyleBackColor = true;
+            this.rdbMASCULINO.CheckedChanged += new System.EventHandler(this.rdbMASCULINO_CheckedChanged);
+            // 
+            // rbdFEMININO
+            // 
+            this.rbdFEMININO.AutoSize = true;
+            this.rbdFEMININO.Location = new System.Drawing.Point(136, 118);
+            this.rbdFEMININO.Name = "rbdFEMININO";
+            this.rbdFEMININO.Size = new System.Drawing.Size(77, 17);
+            this.rbdFEMININO.TabIndex = 31;
+            this.rbdFEMININO.TabStop = true;
+            this.rbdFEMININO.Text = "FEMININO";
+            this.rbdFEMININO.UseVisualStyleBackColor = true;
+            this.rbdFEMININO.CheckedChanged += new System.EventHandler(this.rbdFEMININO_CheckedChanged);
+            // 
+            // lblSEXO
+            // 
+            this.lblSEXO.AutoSize = true;
+            this.lblSEXO.Location = new System.Drawing.Point(12, 102);
+            this.lblSEXO.Name = "lblSEXO";
+            this.lblSEXO.Size = new System.Drawing.Size(36, 13);
+            this.lblSEXO.TabIndex = 32;
+            this.lblSEXO.Text = "SEXO";
+            // 
+            // lblTELEFONE
+            // 
+            this.lblTELEFONE.AutoSize = true;
+            this.lblTELEFONE.Location = new System.Drawing.Point(226, 102);
+            this.lblTELEFONE.Name = "lblTELEFONE";
+            this.lblTELEFONE.Size = new System.Drawing.Size(63, 13);
+            this.lblTELEFONE.TabIndex = 33;
+            this.lblTELEFONE.Text = "TELEFONE";
+            // 
+            // mtbTELEFONE
+            // 
+            this.mtbTELEFONE.Location = new System.Drawing.Point(229, 118);
+            this.mtbTELEFONE.Mask = "(99) 00000-0000";
+            this.mtbTELEFONE.Name = "mtbTELEFONE";
+            this.mtbTELEFONE.Size = new System.Drawing.Size(88, 20);
+            this.mtbTELEFONE.TabIndex = 34;
+            this.mtbTELEFONE.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbTELEFONE_MaskInputRejected);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(331, 428);
+            this.Controls.Add(this.mtbTELEFONE);
+            this.Controls.Add(this.lblTELEFONE);
+            this.Controls.Add(this.lblSEXO);
+            this.Controls.Add(this.rbdFEMININO);
+            this.Controls.Add(this.rdbMASCULINO);
             this.Controls.Add(this.btnSALVAR);
             this.Controls.Add(this.mtbCPF);
             this.Controls.Add(this.mtbNUMERO);
@@ -328,6 +419,11 @@
         private System.Windows.Forms.MaskedTextBox mtbNUMERO;
         private System.Windows.Forms.MaskedTextBox mtbCPF;
         private System.Windows.Forms.Button btnSALVAR;
+        private System.Windows.Forms.RadioButton rdbMASCULINO;
+        private System.Windows.Forms.RadioButton rbdFEMININO;
+        private System.Windows.Forms.Label lblSEXO;
+        private System.Windows.Forms.Label lblTELEFONE;
+        private System.Windows.Forms.MaskedTextBox mtbTELEFONE;
     }
 }
 
