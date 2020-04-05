@@ -51,6 +51,30 @@ namespace TDE_ALEXANDRE
 
         private void btnCANCELAR_Click(object sender, EventArgs e)
         {
+            //textbox clear code
+            txtBAIRRO.Text = "";
+            txtSOBRENOME.Text = "";
+            txtNOME.Text = "";
+            txtEMAIL.Text = "";
+            txtRUA.Text = "";
+            txtEMAIL.Text = "";
+            txtCIDADE.Text = "";
+            txtLOGIN.Text = "";
+
+            //combobox clear code
+            cmbESTADO.Text = "";
+
+            //maskedtextbox clear code
+            mtbCPF.Text = "";
+            mtbDATA.Text = "";
+            mtbNUMERO.Text = "";
+            mtbRG.Text = "";
+            mtbTELEFONE.Text = "";
+
+
+            MessageBox.Show("Formulário Limpo");
+
+            
 
         }
 
@@ -137,6 +161,7 @@ namespace TDE_ALEXANDRE
             mensagem += "Estado:  " + cmbESTADO.Text + "\n";
             mensagem += "Rua:  " + txtRUA.Text + "\n";
             mensagem += "Número:  " + mtbNUMERO.Text + "\n";
+            mensagem += "Login: " + txtLOGIN.Text + "\n";
             mensagem += "Senha:  " + txtSENHA.Text + "\n";
             
             
@@ -166,6 +191,11 @@ namespace TDE_ALEXANDRE
         }
 
         private void mtbDATA_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void txtLOGIN_TextChanged(object sender, EventArgs e)
         {
 
         }

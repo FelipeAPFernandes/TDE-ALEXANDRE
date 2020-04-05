@@ -61,6 +61,8 @@
             this.mtbRG = new System.Windows.Forms.MaskedTextBox();
             this.mtbDATA = new System.Windows.Forms.MaskedTextBox();
             this.lblDATA = new System.Windows.Forms.Label();
+            this.lblLOGIN = new System.Windows.Forms.Label();
+            this.txtLOGIN = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblNOME
@@ -358,7 +360,7 @@
             // lblRG
             // 
             this.lblRG.AutoSize = true;
-            this.lblRG.Location = new System.Drawing.Point(12, 138);
+            this.lblRG.Location = new System.Drawing.Point(12, 148);
             this.lblRG.Name = "lblRG";
             this.lblRG.Size = new System.Drawing.Size(26, 13);
             this.lblRG.TabIndex = 35;
@@ -366,7 +368,7 @@
             // 
             // mtbRG
             // 
-            this.mtbRG.Location = new System.Drawing.Point(12, 154);
+            this.mtbRG.Location = new System.Drawing.Point(12, 164);
             this.mtbRG.Mask = "00-000-000-0";
             this.mtbRG.Name = "mtbRG";
             this.mtbRG.Size = new System.Drawing.Size(70, 20);
@@ -375,7 +377,7 @@
             // 
             // mtbDATA
             // 
-            this.mtbDATA.Location = new System.Drawing.Point(93, 154);
+            this.mtbDATA.Location = new System.Drawing.Point(93, 164);
             this.mtbDATA.Mask = "00/00/0000";
             this.mtbDATA.Name = "mtbDATA";
             this.mtbDATA.Size = new System.Drawing.Size(67, 20);
@@ -386,11 +388,28 @@
             // lblDATA
             // 
             this.lblDATA.AutoSize = true;
-            this.lblDATA.Location = new System.Drawing.Point(90, 138);
+            this.lblDATA.Location = new System.Drawing.Point(90, 148);
             this.lblDATA.Name = "lblDATA";
             this.lblDATA.Size = new System.Drawing.Size(78, 13);
             this.lblDATA.TabIndex = 38;
             this.lblDATA.Text = "NASCIMENTO";
+            // 
+            // lblLOGIN
+            // 
+            this.lblLOGIN.AutoSize = true;
+            this.lblLOGIN.Location = new System.Drawing.Point(174, 148);
+            this.lblLOGIN.Name = "lblLOGIN";
+            this.lblLOGIN.Size = new System.Drawing.Size(40, 13);
+            this.lblLOGIN.TabIndex = 39;
+            this.lblLOGIN.Text = "LOGIN";
+            // 
+            // txtLOGIN
+            // 
+            this.txtLOGIN.Location = new System.Drawing.Point(177, 164);
+            this.txtLOGIN.Name = "txtLOGIN";
+            this.txtLOGIN.Size = new System.Drawing.Size(142, 20);
+            this.txtLOGIN.TabIndex = 40;
+            this.txtLOGIN.TextChanged += new System.EventHandler(this.txtLOGIN_TextChanged);
             // 
             // Form1
             // 
@@ -398,6 +417,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(331, 428);
+            this.Controls.Add(this.txtLOGIN);
+            this.Controls.Add(this.lblLOGIN);
             this.Controls.Add(this.lblDATA);
             this.Controls.Add(this.mtbDATA);
             this.Controls.Add(this.mtbRG);
@@ -473,6 +494,8 @@
         private System.Windows.Forms.MaskedTextBox mtbRG;
         private System.Windows.Forms.MaskedTextBox mtbDATA;
         private System.Windows.Forms.Label lblDATA;
+        private System.Windows.Forms.Label lblLOGIN;
+        private System.Windows.Forms.TextBox txtLOGIN;
     }
 }
 
